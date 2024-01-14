@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment Edit</title>
+  </head>
+
+  <body>
+    <select style="margin-left: 10px">
+      <option value="Edit">Edit</option>
+      <option value="Speed Grader">Speed Grader</option>
+      <option value="Duplicate">Duplicate</option>
+      <option value="Delete">Delete</option>
+      <option value="Move To...">Move To...</option>
+      <option value="Send To...">Send To...</option>
+      <option value="Copy To...">Copy To...</option>
+      <option value="Share to Commons">Share to Commons</option>
+    </select>
+
+    <h2>Assignment Name</h2>
+
+    <input type="text" placeholder="Enter Assignment Name" />
+    <br />
+    <input type="text" placeholder="Enter Assignment Description" />
+    <br />
+
+    <label for="points">Points</label>
+    <br />
+    <input type="text" id="points" placeholder="Enter Points" />
+    <br />
+
+    <label for="assignmentGroup">Assignment Group</label>
+    <br />
+    <select id="assignmentGroup">
+      <option value="assignment">ASSIGNMENTS</option>
+      <option value="Group 2">Group 2</option>
+      <option value="Group 3">Group 3</option>
+      <option value="Group 4">Group 4</option>
+      <option value="Group 5">Group 5</option>
+    </select>
+    <br />
+
+    <label for="displayGradeAs">Display Grade As</label>
+    <br />
+
+    <select id="displayGradeAs">
+      <option value="Points">Points</option>
+      <option value="Percentage">Percentage</option>
+      <option value="Complete/Incomplete">Complete/Incomplete</option>
+      <option value="Letter Grade">Letter Grade</option>
+      <option value="GPA Scale">GPA Scale</option>
+      <option value="Not Graded">Not Graded</option>
+    </select>
+    <br />
+
+    <label for="submissionType">Submission Type</label>
+    <br />
+    <select id="submissionType">
+      <option value="Online">Online</option>
+      <option value="On Paper">On Paper</option>
+      <option value="No Submission">No Submission</option>
+    </select>
+    <br />
+
+    <!-- checkbox options: Text Entry, Website URL, Media Recordings, Student Annotation, File Uploads -->
+    <label>Online Entry Options</label>
+    <br />
+    <input
+      type="checkbox"
+      value="Text Entry"
+      name="check-genre"
+      id="chkbox-text-entry"
+    />
+    <label for="chkbox-text-entry">Text Entry</label>
+    <br />
+
+    <input
+      type="checkbox"
+      value="Website URL"
+      name="check-genre"
+      id="chkbox-website-url"
+    />
+    <label for="chkbox-website-url">Website URL</label>
+    <br />
+    <input
+      type="checkbox"
+      value="Media Recordings"
+      name="check-genre"
+      id="chkbox-media-recordings"
+    />
+    <label for="chkbox-media-recordings">Media Recordings</label>
+    <br />
+    <input
+      type="checkbox"
+      value="Student Annotation"
+      name="check-genre"
+      id="chkbox-student-annotation"
+    />
+    <label for="chkbox-student-annotation">Student Annotation</label>
+    <br />
+    <input
+      type="checkbox"
+      value="File Uploads"
+      name="check-genre"
+      id="chkbox-file-uploads"
+    />
+    <label for="chkbox-file-uploads">File Uploads</label>
+    <br />
+
+    <label>Assign</label>
+    <br />
+    <label>Assign to</label>
+    <br />
+    <input type="text" placeholder="Enter Assignment Name" />
+
+    <br />
+    <label>Due</label>
+    <br />
+    <input type="date" />
+    <br />
+
+    <label>Available From</label>
+    <br />
+    <input type="date" />
+
+    <div>
+      <label>Until</label>
+      <br />
+      <input type="date" />
+    </div>
+
+    <div>
+      <button type="button" id="cancel">Cancel</button>
+      <button type="button" id="save">Save</button>
+    </div>
+  </body>
+</html>

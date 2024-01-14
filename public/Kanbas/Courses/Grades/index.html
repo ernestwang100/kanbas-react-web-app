@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradebook</title>
+  </head>
+  <body>
+    <!-- Import Options Dropdown and Button -->
+    <select id="importDropdown">
+      <option value="gradebook">Gradebook</option>
+      <option value="exams">Exams</option>
+    </select>
+    <button id="importButton">Import</button>
+
+    <!-- Export Options Dropdown and Button -->
+    <select id="exportDropdown">
+      <option value="export">Export</option>
+    </select>
+    <button id="configureButton">Configure</button>
+
+    <h2>Student Names</h2>
+    <input type="text" placeholder="Search Students" />
+
+    <h2>Assignment Names</h2>
+    <input type="text" placeholder="Search Assignments" />
+
+    <p>
+      <button id="applyFiltersButton">Apply Filters</button>
+    </p>
+
+    <!-- Gradebook Table -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>
+            A1 SETUP <br />
+            Out of 100
+          </th>
+          <th>
+            A2 HTML <br />
+            Out of 100
+          </th>
+          <th>
+            A4 BOOTSTRAP <br />
+            Out of 100
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample data, replace with actual data -->
+        <tr>
+          <td>John Doe</td>
+          <td>85</td>
+          <td>92</td>
+          <td>78</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>94</td>
+          <td>88</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>Alice Johnson</td>
+          <td>90</td>
+          <td>85</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td>Bob Williams</td>
+          <td>78</td>
+          <td>80</td>
+          <td>75</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </body>
+</html>
