@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Course Details</title>
+  </head>
+  <body>
+    <h2>Course Details</h2>
+    <label for="image">Image:</label
+    ><input type="file" id="image" name="image" /> <br />
+    <label for="name">Name:</label><input type="text" id="name" name="name" />
+    <br />
+    <label for="code">Code:</label><input type="text" id="code" name="code" />
+    <br />
+    <label for="blueprint">Blueprint:</label>
+    <span id="blueprint">Not enabled</span>
+    <br />
+    <label for="template">Course Template:</label>
+    <input type="checkbox" id="chkbox-template" name="template" />
+    <label for="chkbox-template">Enable course as a Course Template</label>
+    <br />
+    <label for="timezone">Time Zone:</label>
+    <select id="timezone">
+      <option value="PT">Pacific Time(US & Canada) (-08:00/-07:00)</option>
+      <option value="AZ">Arizona (-07:00)</option>
+      <option value="ET">Eastern Time (US & Canada) (-05:00/-04:00)</option>
+      <option value="CT">Central Time (US & Canada) (-06:00/-05:00)</option>
+      <option value="MT">Mountain Time (US & Canada) (-07:00/-06:00)</option>
+      <option value="AT">Alaska Time (US & Canada) (-09:00/-08:00)</option>
+      <option value="HT">
+        Hawaii-Aleutian Time (US & Canada) (-10:00/-09:00)
+      </option>
+      <!-- Add more options as needed -->
+    </select>
+    <br />
+    <div>
+      <label for="sisid">SIS ID:</label>
+      <span id="sisid">Not set</span>
+    </div>
+    <br />
+    <div>
+      <label for="subaccount">Subaccount:</label>
+      <span id="subaccount">Not set</span>
+    </div>
+    <br />
+
+    <div>
+      <label for="term">Term:</label>
+      <span id="term">Not set</span>
+    </div>
+    <br />
+
+    <div>
+      <label for="participation">Participation:</label>
+      <select id="participation">
+        <option value="slt_term">Term</option>
+        <option value="slt_course">Course</option>
+      </select>
+      <br />
+
+      <span id="pfootnote"
+        >Course participation is limited to term start and end dates.
+      </span>
+    </div>
+    <br />
+
+    <div>
+      <label for="start">Start:</label>
+      <br />
+      <input type="date" id="start" name="start" />
+      <br />
+      <label for="end">End:</label>
+      <br />
+      <input type="date" id="end" name="end" />
+      <br />
+      <input type="checkbox" id="chkbox-restrict" name="restrict" />
+      <label for="restrict"
+        >Restrict students from viewing course before term start date</label
+      >
+      <br />
+      <input type="checkbox" id="chkbox-restrict" name="restrict" />
+      <label for="chkbox-restrict"
+        >Restrict students from viewing course after term end date</label
+      >
+    </div>
+
+    <div>
+      <label for="duetime">Default due time:</label>
+      <select id="duetime">
+        <option value="11:59 PM">11:59 PM</option>
+        <option value="01:00 AM">01:00 AM</option>
+        <option value="02:00 AM">02:00 AM</option>
+        <option value="03:00 AM">03:00 AM</option>
+        <option value="04:00 AM">04:00 AM</option>
+        <option value="05:00 AM">05:00 AM</option>
+        <option value="06:00 AM">06:00 AM</option>
+        <option value="07:00 AM">07:00 AM</option>
+        <option value="08:00 AM">08:00 AM</option>
+        <option value="09:00 AM">09:00 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="01:00 PM">01:00 PM</option>
+        <option value="02:00 PM">02:00 PM</option>
+        <option value="03:00 PM">03:00 PM</option>
+        <option value="04:00 PM">04:00 PM</option>
+        <option value="05:00 PM">05:00 PM</option>
+        <option value="06:00 PM">06:00 PM</option>
+        <option value="07:00 PM">07:00 PM</option>
+        <option value="08:00 PM">08:00 PM</option>
+        <option value="09:00 PM">09:00 PM</option>
+        <option value="10:00 PM">10:00 PM</option>
+        <option value="11:00 PM">11:00 PM</option>
+      </select>
+      <br />
+      <span
+        >This influences the user interface for setting due dates. It does not
+        change the time due for any existing assignments.</span
+      >
+    </div>
+
+    <div>
+      <label for="language">Language:</label>
+      <select id="language">
+        <option value="English">English</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Korean">Korean</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Italian">Italian</option>
+        <option value="Portuguese">Portuguese</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Dutch">Dutch</option>
+        <option value="Norwegian">Norwegian</option>
+        <option value="Polish">Polish</option>
+        <option value="Russian">Russian</option>
+        <option value="Swedish">Swedish</option>
+        <option value="Turkish">Turkish</option>
+        <option value="Other">Other</option>
+      </select>
+      <br />
+      <span
+        >This influences the user interface for setting due dates. It does not
+        change the time due for any existing assignments.</span
+      >
+    </div>
+    <br />
+
+    <div>
+      <label for="filestorage">File Storage:</label>
+      <span>10000 megabytes</span>
+    </div>
+    <br />
+
+    <div>
+      <label for="largecourse">Large Course:</label>
+      <input type="checkbox" id="chkbox-largecourse" name="largecourse" />
+      <label for="chkbox-largecourse"
+        >Launch SpeedGrader Filtered by Student Group</label
+      >
+    </div>
+    <br />
+
+    <div>
+      <label for="gradingscheme">Grading Scheme:</label>
+      <input type="checkbox" id="chkbox-gradingscheme" name="gradingscheme" />
+      <label for="chkbox-gradingscheme">Enable course grading scheme</label>
+    </div>
+    <br />
+
+    <div>
+      <label for="license">License:</label>
+      <select id="license">
+        <option value="Creative Commons">Creative Commons</option>
+        <option value="Public Domain">Public Domain</option>
+        <option value="All Rights Reserved">All Rights Reserved</option>
+      </select>
+    </div>
+    <br />
+
+    <div>
+      <label for="filecopyright">File Copyright:</label>
+      <input type="checkbox" id="chkbox-filecopy" name="filecopy" />
+      <label for="chkbox-filecopy"
+        >Copyright and license information must be provided for files before
+        they are published.</label
+      >
+    </div>
+
+    <div>
+      <label for="visibility">Visibility:</label>
+      <span>
+        If you need to make your course public please contact your
+        administrator/support.</span
+      >
+      <br />
+      <select id="visibility">
+        <option value="Course">Course</option>
+        <option value="Institution">Institution</option>
+        <option value="Public">Public</option>
+      </select>
+      <input type="checkbox" id="chkbox-visibility" name="visibility" />
+      <label for="chkbox-visibility"
+        >Include this course in the public course index</label
+      >
+    </div>
+    <br />
+
+    <div>
+      <label for="format">Format:</label>
+      <select id="format">
+        <option value="Online">Online</option>
+        <option value="On Campus">On Campus</option>
+        <option value="Blended">Blended</option>
+        <option value="No Set">No Set</option>
+      </select>
+    </div>
+    <br />
+
+    <div>
+      <label for="masteryPaths"></label>
+      <input type="checkbox" id="chkbox-masteryPaths" name="masteryPaths" />
+      <label for="chkbox-masteryPaths"
+        >Include this course in the public course index
+      </label>
+    </div>
+    <br />
+
+    <label for="description"> Description:</label>
+    <br />
+    <textarea
+      cols="30"
+      rows="10"
+      placeholder="Input description here."
+    ></textarea>
+    <br />
+
+    <a href="#">more options</a>
+    <br />
+    <a href="./../Home/screen.html" target="_top">
+      <button type="button">Update Course Details</button>
+    </a>
+  </body>
+</html>
