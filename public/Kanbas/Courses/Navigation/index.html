@@ -3,68 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <title>Assignment Navigation</title>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
   </head>
 
   <body>
-    <ul>
+    <ul class="wd-navigation">
       <li>
-        <a href="./../Home/screen.html" target="_top"> Home</a>
+        <a
+          href="./../Home/screen.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Home</a
+        >
       </li>
       <li>
-        <a href="./../Modules/screen.html" target="_top"> Modules</a>
+        <a
+          href="./../Modules/screen.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Modules</a
+        >
       </li>
       <li>
-        <a href="./../Piazza/index.html" target="_top"> Piazza</a>
+        <a
+          href="./../Piazza/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Piazza</a
+        >
       </li>
       <li>
-        <a href="./../Zoom Meetings/index.html" target="_top"> Zoom Meetings</a>
+        <a
+          href="./../Zoom Meetings/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Zoom Meetings</a
+        >
       </li>
       <li>
-        <a href="./../Assignments/screen.html" target="_top"> Assignments</a>
+        <a
+          href="./../Assignments/screen.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Assignments</a
+        >
       </li>
       <li>
-        <a href="./../Quizzes/index.html" target="_top"> Quizzes</a>
+        <a
+          href="./../Quizzes/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Quizzes</a
+        >
       </li>
       <li>
-        <a href="./../Grades/screen.html" target="_top"> Grades</a>
+        <a
+          href="./../Grades/screen.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Grades</a
+        >
       </li>
       <li>
-        <a href="./../People/index.html" target="_top"> People</a>
+        <a
+          href="./../People/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          People</a
+        >
       </li>
       <li>
-        <a href="./../Panopto Video/index.html" target="_top"> Panopto Video</a>
+        <a
+          href="./../Panopto Video/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Panopto Video</a
+        >
       </li>
       <li>
-        <a href="./../Discussions/index.html" target="_top"> Discussions</a>
+        <a
+          href="./../Discussions/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Discussions</a
+        >
       </li>
       <li>
-        <a href="./../Announcements/index.html" target="_top"> Announcements</a>
+        <a
+          href="./../Announcements/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Announcements</a
+        >
       </li>
       <li>
-        <a href="./../Pages/index.html" target="_top"> Pages</a>
+        <a
+          href="./../Pages/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Pages</a
+        >
       </li>
       <li>
-        <a href="./../Files/index.html" target="_top"> Files</a>
+        <a
+          href="./../Files/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Files</a
+        >
       </li>
       <li>
-        <a href="./../Rubrics/index.html" target="_top"> Rubrics</a>
+        <a
+          href="./../Rubrics/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Rubrics</a
+        >
       </li>
       <li>
-        <a href="./../Outcomes/index.html" target="_top"> Outcomes</a>
+        <a
+          href="./../Outcomes/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Outcomes</a
+        >
       </li>
       <li>
-        <a href="./../Collaborations/index.html" target="_top">
+        <a
+          href="./../Collaborations/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
           Collaborations</a
         >
       </li>
       <li>
-        <a href="./../Syllabus/index.html" target="_top"> Syllabus</a>
+        <a
+          href="./../Syllabus/index.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
+          Syllabus</a
+        >
       </li>
       <li>
-        <a href="./../Settings/CoursesDetails/screen.html" target="_top">
+        <a
+          href="./../Settings/CoursesDetails/screen.html"
+          target="_top"
+          onclick="makeActive(this)"
+        >
           Settings</a
         >
       </li>
     </ul>
   </body>
+  <script>
+    // When a link is clicked, save its index to local storage
+    function makeActive(element) {
+      var links = document.querySelectorAll(".wd-navigation li");
+      for (var i = 0; i < links.length; i++) {
+        links[i].classList.remove("wd-active");
+        if (links[i] == element.parentElement) {
+          localStorage.setItem("activeCourseLink", i);
+        }
+      }
+      element.parentElement.classList.add("wd-active");
+    }
+
+    // When the page loads, get the active link index from local storage and make that link active
+    window.onload = function () {
+      var activeLinkIndex = localStorage.getItem("activeCourseLink");
+      if (activeLinkIndex) {
+        var links = document.querySelectorAll(".wd-navigation li");
+        links[activeLinkIndex].classList.add("wd-active");
+      }
+    };
+  </script>
 </html>

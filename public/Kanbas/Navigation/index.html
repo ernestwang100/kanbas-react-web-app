@@ -83,7 +83,7 @@
       for (var i = 0; i < links.length; i++) {
         links[i].classList.remove("wd-active");
         if (links[i] == element.parentElement) {
-          localStorage.setItem("activeLink", i);
+          localStorage.setItem("activeKanbasLink", i);
         }
       }
       element.parentElement.classList.add("wd-active");
@@ -91,7 +91,7 @@
 
     // When the page loads, get the active link index from local storage and make that link active
     window.onload = function () {
-      var activeLinkIndex = localStorage.getItem("activeLink");
+      var activeLinkIndex = localStorage.getItem("activeKanbasLink");
       if (activeLinkIndex) {
         var links = document.querySelectorAll(".wd-kanbas-navigation li");
         links[activeLinkIndex].classList.add("wd-active");
