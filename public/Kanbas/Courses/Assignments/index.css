@@ -1,0 +1,49 @@
+.list-group {
+  border-radius: 0 !important;
+  display: flex;
+  /* align-items: center; */
+}
+
+.list-group-item {
+  border-radius: 0 !important;
+  display: flex;
+  /* align-items: center; */
+}
+.list-group-item:first-child {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.assignment-button {
+  background-color: red;
+  border: 1px solid gray !important;
+  border-left: none !important;
+  color: white; /* Add this if you want the text color to be white */
+}
+
+.custom-button {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+  color: black; /* Add this if you want the text color to be black */
+}
+
+.rounded{
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: ">";
+}
+
+.dropdown select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}

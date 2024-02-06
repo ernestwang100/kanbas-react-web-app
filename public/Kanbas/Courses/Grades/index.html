@@ -4,45 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gradebook</title>
+
+    <!-- Import Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- Import Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Import Custom CSS -->
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Import Kanbas Styles -->
+    <link rel="stylesheet" href="../../styles.css" />
   </head>
-  <body>
-    <!-- Import Options Dropdown and Button -->
-    <select id="importDropdown">
-      <option value="gradebook">Gradebook</option>
-      <option value="exams">Exams</option>
-    </select>
-    <button id="importButton">Import</button>
 
-    <!-- Export Options Dropdown and Button -->
-    <select id="exportDropdown">
-      <option value="export">Export</option>
-    </select>
-    <button id="configureButton">Configure</button>
+  <body class="p-3">
+    <nav
+      class="navbar mb-3"
+      style="--bs-breadcrumb-divider: '>'"
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Course Name</a></li>
+        <li class="breadcrumb-item"><a href="#">Term</a></li>
+        <li class="breadcrumb-item"><a href="#">Section</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Grade</li>
+      </ol>
+    </nav>
 
-    <h2>Student Names</h2>
-    <input type="text" placeholder="Search Students" />
+    <div class="row">
+      <div class="col-6 text-left">
+        <!-- Import Options Dropdown -->
+        <select id="importDropdown">
+          <option value="gradebook">Gradebook</option>
+          <option value="exams">Exams</option>
+        </select>
+      </div>
+      <div class="col-6 text-right">
+        <!-- Import Button -->
+        <button class="btn mr-2 gray-button" id="importButton">
+          <i class="fas fa-file-import"></i> Import
+        </button>
 
-    <h2>Assignment Names</h2>
-    <input type="text" placeholder="Search Assignments" />
+        <!-- Export Options Dropdown and Button -->
+        <select id="exportDropdown" class="btn mr-2 gray-button">
+          <option value="export">
+            <i class="fas fa-file-export"></i> Export
+          </option>
+        </select>
+        <!-- Configure Button -->
+        <button class="btn mr-2 gray-button" id="configureButton">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h2>Student Names</h2>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Students"
+          />
+        </div>
+      </div>
+      <div class="col">
+        <h2>Assignment Names</h2>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Assignments"
+          />
+        </div>
+      </div>
+    </div>
 
     <p>
-      <button id="applyFiltersButton">Apply Filters</button>
+      <button id="applyFiltersButton" class="btn mr-2 gray-button">
+        <i class="fas fa-filter"></i> Apply Filters
+      </button>
     </p>
 
     <!-- Gradebook Table -->
-    <table border="1">
+    <table class="table table-striped">
       <thead>
         <tr>
-          <th>Student Name</th>
-          <th>
+          <th scope="col">Student Name</th>
+          <th scope="col">
             A1 SETUP <br />
             Out of 100
           </th>
-          <th>
+          <th scope="col">
             A2 HTML <br />
             Out of 100
           </th>
-          <th>
+          <th scope="col">
             A4 BOOTSTRAP <br />
             Out of 100
           </th>

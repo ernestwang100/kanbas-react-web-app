@@ -3,183 +3,464 @@
   <head>
     <meta charset="UTF-8" />
     <title>Assignment</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <!-- import Kanbas/styles.css -->
+    <link rel="stylesheet" href="../../styles.css" />
   </head>
 
   <body>
-    <input type="text" placeholder="Search for Assignments" />
-    <button type="button">Group</button>
-    <button type="button">Assignment</button>
-    <select>
-      <option value="Edit Assignment Dates">Edit</option>
-    </select>
+    <nav
+      class="navbar d-sm-none"
+      style="--bs-breadcrumb-divider: '>'"
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Course Name</a></li>
+        <li class="breadcrumb-item"><a href="#">Term</a></li>
+        <li class="breadcrumb-item"><a href="#">Section</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+      </ol>
+    </nav>
 
-    <div style="display: flex; align-items: center">
-      <h2>ASSIGNMENTS 40% of Total</h2>
+    <div class="wd-flex-grow-1">
+      <div class="d-flex align-items-center">
+        <div style="margin-right: auto; margin-top: 5px">
+          <input type="text" placeholder="Search For Assignments" />
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i
+              class="fa fa-plus"
+              aria-hidden="true"
+              style="margin-right: 5px"
+            ></i>
+            Group
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </div>
+        <button style="background-color: red; color: white; min-width: 150px">
+          <i
+            class="fa fa-plus"
+            aria-hidden="true"
+            style="margin-right: 5px"
+          ></i>
+          Assignment
+        </button>
+        <button class="btn">
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </button>
+      </div>
 
-      <!-- Edit, Speed Grader, Duplicate, Delete, Move To..., Send To..., Copy To..., Share to Commons -->
-      <select style="margin-left: 10px">
-        <option value="Edit">Edit</option>
-        <option value="Speed Grader">Speed Grader</option>
-        <option value="Duplicate">Duplicate</option>
-        <option value="Delete">Delete</option>
-        <option value="Move To...">Move To...</option>
-        <option value="Send To...">Send To...</option>
-        <option value="Copy To...">Copy To...</option>
-        <option value="Share to Commons">Share to Commons</option>
-      </select>
-    </div>
-
-    <ul>
-      <li>
-        <a href="./Edit/screen.html" target="_top"
-          >A1- ENV + HTML Multiple Modules</a
+      <div class="list-group" style="padding-right: 30px">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action list-group-item-secondary"
+          aria-current="true"
         >
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="./Edit/screen.html" target="_top">A2 – CSS + BOOTSTRAP</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="./Edit/screen.html" target="_top">A3 – JS + REACT</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="./Edit/screen.html" target="_top">A4 – STATE + REDUX</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="./Edit/screen.html" target="_top">A5 – NODE + SESSION</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-    </ul>
-
-    <div style="display: flex; align-items: center">
-      <h2>QUIZZES 10% of Total</h2>
-
-      <!-- Edit, Speed Grader, Duplicate, Delete, Move To..., Send To..., Copy To..., Share to Commons -->
-      <select style="margin-left: 10px">
-        <option value="Edit">Edit</option>
-        <option value="Speed Grader">Speed Grader</option>
-        <option value="Duplicate">Duplicate</option>
-        <option value="Delete">Delete</option>
-        <option value="Move To...">Move To...</option>
-        <option value="Send To...">Send To...</option>
-        <option value="Copy To...">Copy To...</option>
-        <option value="Share to Commons">Share to Commons</option>
-      </select>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="justify-content: flex-start; margin-right: 0px"
+          >
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="justify-content: flex-start; margin-right: 0px"
+            ></i>
+          </i>
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          <span style="margin-left: 10px; font-weight: bold; font-size: 18px"
+            >Assignments</span
+          >
+          <span class="float-md-end">
+            <label class="rounded-input"> 40% of total</label>
+            <i
+              class="fa fa-plus"
+              style="margin-left: 20px; margin-right: 20px"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="justify-content: flex-start; margin-right: 0px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A1 SETUP </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A2 HTML </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A3 CSS </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A4 BOOTSTRAP </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A5 JAVASCRIPT </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A6 REACT </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+        <a
+          href="./Edit/screen.html"
+          target="_top"
+          class="list-group-item list-group-item-action"
+        >
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-ellipsis-v"
+            aria-hidden="true"
+            style="
+              justify-content: flex-start;
+              margin-right: 0px;
+              vertical-align: middle;
+            "
+          ></i>
+          <i
+            class="fa fa-pencil-square-o"
+            aria-hidden="true"
+            style="margin-left: 20px; color: green; vertical-align: middle"
+          ></i>
+          <label class="ms-1" style="font-weight: bold"> A7 NODE </label>
+          <br />
+          <label style="font-size: 10px; margin-left: 75px; padding: 0px">
+            Week 0 SETUP - Week starting on monday September 5th
+            <br />
+            <b>Due</b>
+            Sep 18, 2022
+          </label>
+          <span class="float-md-end">
+            <i
+              class="fa fa-check-circle"
+              style="color: green"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-ellipsis-v"
+              aria-hidden="true"
+              style="margin-left: 20px"
+            ></i>
+          </span>
+        </a>
+      </div>
     </div>
-
-    <ul>
-      <li>
-        <a href="#">Q1- ENV + HTML Multiple Modules</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="#">Q2 – CSS + BOOTSTRAP</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="#">Q3 – JS + REACT</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="#">Q4 – STATE + REDUX</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="#">Q5 – NODE + SESSION</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-    </ul>
-
-    <div style="display: flex; align-items: center">
-      <h2>EXAMS 20% of Total</h2>
-
-      <!-- Edit, Speed Grader, Duplicate, Delete, Move To..., Send To..., Copy To..., Share to Commons -->
-      <select style="margin-left: 10px">
-        <option value="Edit">Edit</option>
-        <option value="Speed Grader">Speed Grader</option>
-        <option value="Duplicate">Duplicate</option>
-        <option value="Delete">Delete</option>
-        <option value="Move To...">Move To...</option>
-        <option value="Send To...">Send To...</option>
-        <option value="Copy To...">Copy To...</option>
-        <option value="Share to Commons">Share to Commons</option>
-      </select>
-    </div>
-
-    <ul>
-      <li>
-        <a href="#">Midterm</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-      <li>
-        <a href="#">Q2 – Final</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-    </ul>
-
-    <!-- PROJECT 30% -->
-    <div style="display: flex; align-items: center">
-      <h2>PROJECT 30% of Total</h2>
-
-      <!-- Edit, Speed Grader, Duplicate, Delete, Move To..., Send To..., Copy To..., Share to Commons -->
-      <select style="margin-left: 10px">
-        <option value="Edit">Edit</option>
-        <option value="Speed Grader">Speed Grader</option>
-        <option value="Duplicate">Duplicate</option>
-        <option value="Delete">Delete</option>
-        <option value="Move To...">Move To...</option>
-        <option value="Send To...">Send To...</option>
-        <option value="Copy To...">Copy To...</option>
-        <option value="Share to Commons">Share to Commons</option>
-      </select>
-    </div>
-    <ul>
-      <li>
-        <a href="#">Project</a>
-        <br />
-        <a href="#">Multiple Modules</a>
-        <span>|</span>
-        Not available yet
-      </li>
-    </ul>
   </body>
 </html>
