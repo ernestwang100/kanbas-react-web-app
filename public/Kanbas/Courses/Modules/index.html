@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Implement buttons Collapse All, View Progress, etc. here -->
+    <div class="btn-toolbar justify-content-end mb-3">
+      <button class="btn mr-2 custom-button">Collapse All</button>
+      <button class="btn mr-2 custom-button">View Progress</button>
+      <button
+        class="btn mr-2 dropdown-toggle custom-button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="fas fa-check-circle green-icon"></i> Publish All
+      </button>
+      <div class="dropdown-menu">
+        <!-- Add dropdown menu items here -->
+      </div>
+      <button class="btn mr-2 module-button">
+        <i class="fas fa-plus"></i> Module
+      </button>
+      <button class="btn custom-button">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+    </div>
+
+    <ul class="list-group wd-modules">
+      <li class="list-group-item">
+        <div>
+          <i class="fa fa-ellipsis-v"></i> Week 1
+          <span class="float-end">
+            <i class="fa fa-check-circle text-success"></i>
+            <i class="fa fa-plus ms-2"></i>
+            <i class="fa fa-ellipsis-v ms-2"></i>
+          </span>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Learning Objectives
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <div>
+          <i class="fa fa-ellipsis-v"></i> Week 2
+          <span class="float-end">
+            <i class="fa fa-check-circle text-success"></i>
+            <i class="fa fa-plus ms-2"></i>
+            <i class="fa fa-ellipsis-v ms-2"></i>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
