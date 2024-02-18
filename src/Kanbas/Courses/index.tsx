@@ -8,6 +8,8 @@ import Assignments from "./Assignments";
 import exp from "constants";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import { Link } from "react-router-dom";
+import { Breadcrumb } from "react-bootstrap";
 
 function Courses() {
   const { courseId } = useParams();
@@ -15,7 +17,19 @@ function Courses() {
   return (
     <div>
       <h1>
-        <HiMiniBars3 /> Course {course?.name}
+        <Breadcrumb>
+          <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/course" }}>
+            Course
+          </Breadcrumb.Item>
+          <Breadcrumb.Item
+            linkAs={Link}
+            linkProps={{ to: `/course/${course?._id}` }}
+          >
+            {course?.name}
+          </Breadcrumb.Item>
+          <Breadcrumb.Item active>Home</Breadcrumb.Item>
+        </Breadcrumb>
+        {/* <HiMiniBars3 /> Course {course?.name} / <Link to="Home">Home</Link> */}
       </h1>
       <CourseNavigation />
       <div>
