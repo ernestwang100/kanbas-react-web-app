@@ -1,5 +1,11 @@
 import { courses } from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useParams,
+  useLocation,
+} from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
@@ -13,11 +19,31 @@ import { Breadcrumb } from "react-bootstrap";
 
 function Courses() {
   const { courseId } = useParams();
+  const location = useLocation();
   const course = courses.find((course) => course._id === courseId);
+
+  // Function to generate dynamic breadcrumb based on the current pathconst generateBreadcrumb = () => [
+  const generateBreadcrumb = () => {
+    const pathSnippets = location.pathname.split("/").filter((i) => i);
+    const extraBreadcrumbItems = pathSnippets.map((snippet, index) => {
+      const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
+      return (
+        <Breadcrumb.Item linkAs={Link} linkProps={{ to: url }} key={url}>
+          {snippet}
+        </Breadcrumb.Item>
+      );
+    });
+    const breadcrumbItems = [
+      <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/course" }} key="home">
+        Course
+      </Breadcrumb.Item>,
+    ].concat(extraBreadcrumbItems);
+    return <Breadcrumb>{breadcrumbItems}</Breadcrumb>;
+  };
   return (
     <div>
       <h1>
-        <Breadcrumb>
+        {/* <Breadcrumb>
           <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/course" }}>
             Course
           </Breadcrumb.Item>
@@ -28,8 +54,10 @@ function Courses() {
             {course?.name}
           </Breadcrumb.Item>
           <Breadcrumb.Item active>Home</Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         {/* <HiMiniBars3 /> Course {course?.name} / <Link to="Home">Home</Link> */}
+        {/* <HiMiniBars3 />  */}
+        {generateBreadcrumb()}
       </h1>
       <CourseNavigation />
       <div>
