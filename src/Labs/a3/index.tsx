@@ -7,11 +7,13 @@ import Highlight from "./Highlight";
 import Add from "./Add";
 import TodoItem from "./todos/TodoItem";
 import TodoList from "./todos/TodoList";
+import Hello from "./hello";
 
 function Assignment3() {
   return (
     <div className="container">
       <h1>Assignment 3</h1>
+      <Hello />
       <TodoList />
       <ul className="list-group">
         <TodoItem />
