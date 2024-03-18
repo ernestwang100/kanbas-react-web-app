@@ -1,4 +1,5 @@
-import { courses } from "../../Kanbas/Database";
+import db from "../../Kanbas/Database";
+import { useState } from "react";
 import {
   Navigate,
   Route,
@@ -17,7 +18,7 @@ import Grades from "./Grades";
 import { Link } from "react-router-dom";
 import { Breadcrumb } from "react-bootstrap";
 
-function Courses() {
+function Courses({ courses }: { courses: any[] }) {
   const { courseId } = useParams();
   const location = useLocation();
   const course = courses.find((course) => course._id === courseId);

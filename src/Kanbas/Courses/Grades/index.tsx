@@ -1,6 +1,13 @@
-import { assignments, enrollments, grades, users } from "../../Database";
+import db from "../../Database";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 function Grades() {
+  const [courses, setCourses] = useState(db.courses);
+  const [modules, setModules] = useState(db.modules);
+  const [assignments, setAssignments] = useState(db.assignments);
+  const [users, setUsers] = useState(db.users);
+  const [enrollments, setEnrollments] = useState(db.enrollments);
+  const [grades, setGrades] = useState(db.grades);
   const { courseId } = useParams();
   const as = assignments.filter((assignment) => assignment.course === courseId);
   const es = enrollments.filter((enrollment) => enrollment.course === courseId);
